@@ -7,17 +7,30 @@
     </head>
     <body>
         <main>
-            <h1>Slack Scrabble Typer</h1>
-            <form>
+            <h1 class="is-scrabble-text">Slack Scrabbler</h1>
+            <form id="scrabble_text_form">
                 <fieldset>
-                    <input type="text" name="user_input" id="user_input">
-                    <textarea readonly width="100" height="8">
+                    <div class="fieldgroup">
+                        <label for="user_input">Enter plain text</label>
+                        <input type="text" name="user_input" id="user_input">
+                        <button type="reset" name="reset" id="reset" class="is-scrabble-text">Reset</button>
+                    </div>
+                    
+                    <label for="slack_output">Scrabbled text for slack</label>
+                    <textarea readonly name="slack_output" id="slack_output" width="100" height="8"></textarea>
 
-                    </textarea>
-                    <div id="scrabbled_text"></div>
-                    <button name="copy_text" id="copy_text" 
+                    <div id="scrabbled_output"></div>
+
+                    <button type="submit" name="copy_text" id="copy_text" class="is-scrabble-text">Copy Text</button>
                 </fieldset>
             </form>
+            <h2 class="is-scrabble-text">Download Icons</h2>
+            <p>
+                Upload to your local slack and drive your managers crazy.
+            </p>
+            <p>
+                <a href="scrabble-slack-emoji.zip">scrabble-slack-emoji.zip</a>
+            </p>
         </main>
     </body>
 </html>
